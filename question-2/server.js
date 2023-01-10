@@ -5,6 +5,9 @@ app.use(express.json());
 const todos = [
   { content: "Finish reading book", status: false },
   { content: "Take dog for walk", status: true },
+  { content: "Complete homework", status: true },
+  { content: "Eat breakfast", status: false },
+  { content: "Hit the gym", status: true },
 ];
 
 app.get("/", (req, res) => {
