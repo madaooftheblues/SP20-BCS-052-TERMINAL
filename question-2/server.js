@@ -38,3 +38,5 @@ app.post("/api/todos/", (req, res) => {
   todos.push(req.body);
   res.send(todos);
 });
+
+app.listen(8080);
