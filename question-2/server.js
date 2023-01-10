@@ -33,3 +33,8 @@ app.delete("/api/todos/:index", (req, res) => {
   todos.splice(req.params.index, 1);
   res.send(todos);
 });
+
+app.post("/api/todos/", (req, res) => {
+  todos.push(req.body);
+  res.send(todos);
+});
