@@ -26,9 +26,9 @@ app.get("/api/todos/:index", (req, res) => {
 });
 
 app.put("/api/todos/:index", (req, res) => {
-  todos[req.params.index] = req.body.content;
-  todos[req.params.index] = req.body.status;
-  res.send(todos[req.params.index]);
+  const todo = ({ content, status } = req.body);
+  todos[req.params.index] = todo;
+  todos[req.params.index] = res.send(todos[req.params.index]);
 });
 
 app.delete("/api/todos/:index", (req, res) => {
