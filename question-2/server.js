@@ -22,3 +22,9 @@ app.get("/api/todos/:index", (req, res) => {
     return res.status(400).send("todo does not exist");
   res.send(todos[req.params.index]);
 });
+
+app.put("/api/todos/:index", (req, res) => {
+  todos[req.params.index] = req.body.content;
+  todos[req.params.index] = req.body.status;
+  res.send(todos[req.params.index]);
+});
