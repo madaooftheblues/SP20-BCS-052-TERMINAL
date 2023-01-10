@@ -11,7 +11,7 @@ app.get("/", (req, res) => {
   res.send("Welcome to your todos api");
 });
 
-app.get("/appi/todos", (req, res) => {
+app.get("/api/todos", (req, res) => {
   if (!todos) res.status(400).send("No todos found");
   res.send(todos);
 });
