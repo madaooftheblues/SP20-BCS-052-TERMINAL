@@ -28,3 +28,8 @@ app.put("/api/todos/:index", (req, res) => {
   todos[req.params.index] = req.body.status;
   res.send(todos[req.params.index]);
 });
+
+app.delete("/api/todos/:index", (req, res) => {
+  todos.splice(req.params.index, 1);
+  res.send(todos);
+});
